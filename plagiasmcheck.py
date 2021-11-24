@@ -1,5 +1,3 @@
-# https://towardsdatascience.com/simple-plagiarism-detection-in-python-2314ac3aee88
-
 import re
 import numpy as np
 import plotly.graph_objects as go
