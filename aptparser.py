@@ -6,7 +6,8 @@ import csv
 
 csv_file = open('aptscrapper.csv', 'w')
 csv_writer = csv.writer(csv_file)
-csv_writer.writerow(['Constrction Name', 'Location', 'Construction Company', 'Company Webpage', 'Price', 'Documaents', 'ЛУН link'])
+csv_writer.writerow(['Constrction Name', 'Location', 'Construction Company', #'Company Webpage',
+ 'Price', 'Documaents', 'ЛУН link'])
 
 # urllun = ('https://lun.ua/uk/%D0%BD%D0%BE%D0%B2%D0%BE%D0%B1%D1%83%D0%B4%D0%BE%D0%B2%D0%B8-%D0%BA%D0%B8%D1%94%D0%B2%D0%B0') # All const in Kyiv
 
@@ -64,7 +65,8 @@ for result in results:
                 url_soup = BeautifulSoup(url_response, 'lxml')
                 comp_url = url_soup.find('div', class_='UITwoLinerButton-content').text.strip()
 
-        csv_writer.writerow([const_name, location, company_name, comp_url, price, docs, result])
+        csv_writer.writerow([const_name, location, company_name, #comp_url,
+         price, docs, result])
 
 csv_file.close()
 
